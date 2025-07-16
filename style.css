@@ -1,0 +1,394 @@
+.instagram , .facebook , .linkedin{
+  display: inline-block;
+  width: 38px;
+  height: 34px;
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+.instagram{
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12'/%3E%3Cpath d='M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m1.008-5.5h-.01'/%3E%3C/g%3E%3C/svg%3E");
+}
+.facebook {
+   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M3.11 15c-.559 0-1.09-.222-1.49-.617s-.617-.931-.617-1.49v-9.79c0-.559.222-1.09.617-1.49S2.551.996 3.11.996h9.79c.559 0 1.09.222 1.49.617s.617.931.617 1.49v9.79c0 .559-.222 1.09-.617 1.49S13.459 15 12.9 15zm8.55-5.91h-1.48v4.89h2.72a1.084 1.084 0 0 0 1.087-1.087v-9.79A1.086 1.086 0 0 0 12.9 2.016H3.11a1.09 1.09 0 0 0-1.087 1.087v9.79A1.09 1.09 0 0 0 3.11 13.98h5.44V9.09H6.92V7.46h1.63v-.876c0-1.66.808-2.39 2.19-2.39c.647 0 .995.047 1.16.07l.01.001v1.56h-.94c-.474 0-.698.203-.766.612a2 2 0 0 0-.023.322v.697h1.71l-.233 1.63z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+.linkedin {
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.51 1.51 0 0 1-1.5 1.5H5.56a1.51 1.51 0 0 1-1.5-1.5V5.56a1.51 1.51 0 0 1 1.5-1.5h12.88a1.51 1.51 0 0 1 1.5 1.5Z'/%3E%3Cpath fill='%23000' d='M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z'/%3E%3Ccircle cx='7.376' cy='6.744' r='1' fill='%23000'/%3E%3Cpath fill='%23000' d='M17.62 13.37v3.88a1 1 0 1 1-2 0v-3.88a1.615 1.615 0 1 0-3.23 0v3.88a1 1 0 0 1-2 0v-6.5a1.016 1.016 0 0 1 1-1a.94.94 0 0 1 .84.47a3.61 3.61 0 0 1 5.39 3.15'/%3E%3C/svg%3E");
+  height: 38px;
+}
+
+*{
+    font-family: 'outfit';
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 💡 aligns <p> and <nav> vertically */
+    padding: 0 150px 0 60px; 
+    flex-wrap: wrap;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav a , header p ,header u, .upper-section .name , .upper-section .title{
+    text-transform: uppercase;
+}
+
+
+nav a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+
+header p{
+    font-size: 27px;
+    font-weight: 700;
+}
+
+header  u{
+    color:#0B2B67;
+    font-weight: 300;
+    font-size: 27px;
+}
+.resume-small-screen{
+    display: none;
+}
+
+@media (max-width: 768px){
+    nav{
+        display: none;
+    }
+    header div {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    header p , header u{
+       font-size: 22px;  
+       margin: 0;
+       margin-left: -40px;
+    }
+    header p{
+    font-weight: 700;  
+    }
+    header u{
+        font-weight: 300;
+        margin-bottom: 30px 
+    }
+    .resume-small-screen{
+        display: flex;
+        margin-right: -145px;
+        margin-top: -20px;
+    }
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin-left: 50px;
+    width: 412.87px;
+    height: 542px;
+    background-color:  #bcb3e4;
+    border-radius: 34px;
+    box-shadow: 10px 28px 10px rgba(0, 0, 0, 0.2);
+    border: 1px #afa4e0;
+    /*
+    Shadow moves 10px right → directly under the element
+    Shadow moves 28px down (creates a "lifted" look)'
+    The shadow is blurred by 10px (higher = softer shadow)
+    rgba(red, green, blue, alpha)
+    alpha → 0 (fully transparent) to 1 (fully opaque)
+    0,0,0,0.2 -> black with 20% visible
+    */
+}
+.pic{
+    width: 198px;
+    height: 155px;
+}
+.upper-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
+}
+.upper-section .name{
+    font-size: 28px;
+    font-weight: 400;
+    color:#000046;
+    text-align: center;
+    max-width: 200px;
+}
+hr {
+  width: 150px;
+  border: 1px solid #000046;
+}
+.upper-section .title{
+    font-size: 32px;
+    font-weight: 500;
+    color: #000046;   
+}
+
+.lower-section{
+  background-color: white;
+  padding: 10px;
+  border: 1px solid rgb(231, 230, 230);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0 0 34px 34px;
+}
+
+.lower-section p{
+    font-size: 20px;
+    color:#000046;
+    font-weight: 700;
+}
+
+.lower-section .socials{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+@media (max-width: 768px){
+    .card{
+        width: 287px;
+        height: 357px;
+        margin-left: 150px;
+        z-index: -1;
+    }
+    .pic{
+        width:188px;
+        height: 155px;
+    }
+    .upper-section .name{
+        font-size: 20px;
+        font-weight:600;
+    }
+    .upper-section .title ,hr{
+        display: none;  
+    }
+
+    .instagram , .facebook{
+        width: 23.33px;
+        height: 23.33px;
+    }
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 190px;
+    margin-top: 50px;
+
+}
+.description p:first-of-type{
+    color: #000046;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.description p:nth-of-type(2){
+    font-size: 30px;
+}
+
+button{
+    box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.btns{
+    display: flex;
+    gap: 20px;
+}
+.resume , .projects, .resume-small-screen{
+    border-radius: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+.resume, .resume-small-screen{
+    background-color: #000046;
+    color: white;
+    border: 1px solid #000046;
+}
+.projects{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.description p:nth-of-type(3){
+    max-width: 524px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.decore {
+  position: absolute;
+  top: 0px;
+  right: 0px; 
+  z-index: -1;
+}
+
+@media (max-width: 768px){
+    
+    .description{
+        margin-left:45px;
+        width: 348px;
+        height: 348px;
+        background-color: #ebe8e8;
+        border-radius: 24px;
+        padding: 20px;
+        z-index: -2;
+        justify-content: flex-end;
+        border: 2px solid #000046;
+        margin-top: -50px; /*A positive margin-top pushes the element down by that amount.
+                            A negative margin-top pulls the element up by that amount*/
+    }
+    .description p:first-of-type{
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .description p:nth-of-type(2), .small-screen, .resume{
+        display: none;
+    }  
+
+    .description p:nth-of-type(3){
+        max-width: 524px;
+        font-size: 18px;
+    }
+
+    .projects,.resume-small-screen{
+        font-size: 19px;
+        padding: 4px 25px;
+    }
+    .btns {
+        order: 2;             
+        justify-content: flex-end;
+        margin-right: 45px;
+        /*By default, all flex items have order: 0. They appear in source order.
+        But you can change their visual order with order — a lower number shows first.
+        Setting order: 1 means this element will appear before any element with order: 2.*/
+    }
+    .projects{
+        order:1;
+    }
+    .decore {
+        margin-top: 50px;
+        width:420px;
+        height: 924px;
+    }
+}
+    
+
+.footer-big-screen {
+  background-color: #000046;
+  color: white;
+  padding: 25px 50px;
+  border-radius: 24px 24px 0 0;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-container > div {
+  flex: 1 1 200px;
+}
+
+.footer-container h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer-container p,
+.footer-container a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links ul , .footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li , .footer-contact li{
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+.footer-small-screen{
+    display:none;
+}
+@media (max-width: 768px){
+    .footer-big-screen{
+        display:none;
+    }
+    .footer-small-screen {
+        display: block;/*block means the element takes full width by default and stacks vertically */
+        padding: 20px;
+        text-align: center;
+    }
+    .content-info {
+        display: flex;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+    }
+    .call h3, .email h3{
+        font-size: 20px;
+        font-weight:700;
+        margin-bottom: 2px; /* or try 0px for no space */
+    }
+    .call a, .email a{
+        text-decoration: none;
+        font-size: 20px;
+        font-family:'inter' ;
+        color: black;
+    }
+    .small-footer{
+        margin-top: 50px;
+        background-color: #000046;
+        padding: 1px 80px;
+        color:#ccc;
+    }
+
+
+
+}
