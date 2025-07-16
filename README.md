@@ -2,6 +2,7 @@
 
 **Live Demo:**
 👉 [Click here to view it live](https://somayatamer.github.io/Adaptive-Portfolio-Design/) *(hosted via GitHub Pages)*
+
 A clean, responsive, and **adaptive** portfolio website designed for showcasing your professional identity. Built with HTML and CSS, it features a stylish layout optimized for both desktop and mobile experiences.
 
 ---
